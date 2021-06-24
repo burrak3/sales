@@ -10,12 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-import os
-import netifaces
+import os #this is to be done in virgin machine
+import netifaces #this is to be done in virgin machine
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent #changed parent folder in out of the box
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-%am-=1%(440rl@wc7bfm9%2d#w1x6)k#)5v5aj(k-d#=1-cg7&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-def ip_addresses():
+def ip_addresses(): #this is to be done in virgin machine
     ip_list = ['.giznama.xyz']
     for interface in netifaces.interfaces():
         addrs = netifaces.ifaddresses(interface)
@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'testproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+DATABASES = { #this is to be done in virgin machine
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', #sql changed to postgres
         'NAME': 'sales',
         'USER': 'lalit',
         'PASSWORD': 'lk966f',
@@ -132,7 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/') # changed introduced in virgin machine
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
